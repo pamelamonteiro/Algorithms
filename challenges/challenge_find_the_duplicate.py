@@ -1,12 +1,8 @@
 def find_duplicate(nums):
-    if nums == "":
+    if isinstance(nums, int) is False or nums == "" or nums < 0:
         return False
     sorted(nums)
     for n in range(1, len(nums)):
-        if isinstance(nums[n], int) is False:
-            return False
-        if nums[n] <= 0:
-            return False
         if nums[n] == nums[n - 1]:
             return nums[n]
     return False
